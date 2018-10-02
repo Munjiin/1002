@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    .items{
+        border:1px solid blue;
+    }
+
+    .items ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       flex-wrap: wrap;  /*크기에 맞게끔 화면 조절시 변환 반응형.*/
+
+    }
+
+    .items ul li{
+        list-style:none;/* 점 없애기*/
+        width:150px;
+        height: 150px;
+        background: -webkit-linear-gradient(top, #f3c5bd 0%,#ea2803 44%,#ea2803 44%,#e86c57 50%,#ff6600 75%,#c72200 100%); /*Ultimate CSS Gradient Generator*/
+        border-radius: 750px; /*모서리 둥글게*/
+
+    }
+    .items ul li:nth-child(even){
+        background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 59%,#7cbc0a 100%);
+    } /*홀수짝수 다르게 표시*/
+
+
+    img{
+        width: 100px;
+        margin: 25px;
+        border-radius: 50px; /*모서리 둥글게*/
+    }
+
+</style>
+
+<div class="items">
+    <ul>
+        <li><img src="samples/m1.jpg"></li>
+        <li><img src="samples/m2.jpg"></li>
+        <li><img src="samples/m3.jpg"></li>
+        <li><img src="samples/m4.jpg"></li>
+    </ul>
+</div>
+
+<div class="items">
+    <ul>
+
+        <li><img src="samples/m6.jpg"></li>
+        <li><img src="samples/m7.jpg"></li>
+        <li><img src="samples/m8.jpg"></li>
+        <li><img src="samples/m9.jpg"></li>
+    </ul>
+</div>
+
+</body>
+</html>

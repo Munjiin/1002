@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{ /*모든 거에 주는 스타일*/
+        margin:0; /*바깥 쪽 */
+        padding:0; /*안 쪽*/
+    }
+
+
+    /*div{*/
+        /*margin:10px;*/
+        /*background-color:aqua;*/
+        /*width:50%;*/
+        /*border: 1px solid black;*/
+    /*}*/
+
+    /*.wrapper{*/
+        /*margin:100px;*/
+        /*background-color: red;*/
+        /*padding: 20px; !*글자와 안의 네모 사이의 페딩*!*/
+    /*}*/
+
+    .header{
+        background-color: aqua;
+        width:100%;
+        height:10em; /* height는 %는 안되고 px만 가능 em은 글자 단위로 잡음*/
+    }
+    .menu{
+        background-color: crimson;
+        width:20%;
+        height:10em;
+        float:left; /*메인이 옆으로 붙음*/
+    }
+    .main{
+        background-color: green;
+        width:80%;
+    }
+    .footer{
+        clear:both; /*옆으로 붙은 것을 밑으로 */
+        width: 100%;
+        background-color: lavenderblush;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="menu">
+            MENU
+        </div>
+        <div class="main">
+            MAIN
+        </div>
+        <div class="footer">
+            FOOTER
+        </div>
+
+        <!--<h1>AAAAㅁAAAAAAAAAAAAAAAAAAAAA</h1>-->
+
+    </div>
+</div>
+
+</body>
+</html>
