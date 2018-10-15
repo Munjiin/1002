@@ -1,0 +1,622 @@
+프로젝트 명 1002
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<div class="container">
+    <div class="wrapper">
+        <h1>AAAAAAAA</h1>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+----------------------
+스타일 입히기
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    div{
+        margin:10px;
+        background-color:aqua;
+        width:50%;
+        border: 1px solid black;
+    }
+
+    .wrapper{
+        margin:100px;
+        background-color: red;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="wrapper">
+        <h1>AAAAAAAA</h1>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+----------------------------------------
+====================================================<ex001.html>
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="menu">
+            MENU
+        </div>
+        <div class="main">
+            MAIN
+        </div>
+        <div class="footer">
+            FOOTER
+        </div>
+
+        <!--<h1>AAAAㅁAAAAAAAAAAAAAAAAAAAAA</h1>-->
+
+    </div>
+
+=-----------스타일 입히기
+.header{
+        background-color: aqua;
+        width:100%;
+        height:10em; /* height는 %는 안되고 px만 가능 em은 글자 단위로 잡음*/
+    }
+    .menu{
+        background-color: crimson;
+        width:20%;
+        height:10em;
+        float:left; /*메인이 옆으로 붙음*/
+    }
+    .main{
+        background-color: green;
+        width:80%;
+    }
+    .footer{
+        clear:both; /*옆으로 붙은 것을 밑으로 */
+        width: 100%;
+        background-color: lavenderblush;
+    }
+=====================================================================<flexEx.html>
+<div class="items">
+    <ul>
+        <li><img src="samples/m1.jpg"></li>
+        <li><img src="samples/m2.jpg"></li>
+        <li><img src="samples/m3.jpg"></li>
+        <li><img src="samples/m4.jpg"></li>
+    </ul>
+</div>
+
+<div class="items">
+    <ul>
+
+        <li><img src="samples/m6.jpg"></li>
+        <li><img src="samples/m7.jpg"></li>
+        <li><img src="samples/m8.jpg"></li>
+        <li><img src="samples/m9.jpg"></li>
+    </ul>
+</div>
+---------------스타일 입히기
+<style>
+    .items{
+        border:1px solid blue;
+    }
+
+    .items ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       flex-wrap: wrap;  /*크기에 맞게끔 화면 조절시 변환 반응형.*/
+
+    }
+
+    .items ul li{
+        list-style:none;/* 점 없애기*/
+        width:150px;
+        height: 150px;
+        background: -webkit-linear-gradient(top, #f3c5bd 0%,#ea2803 44%,#ea2803 44%,#e86c57 50%,#ff6600 75%,#c72200 100%); /*Ultimate CSS Gradient Generator*/
+        border-radius: 750px; /*모서리 둥글게*/
+
+    }
+    .items ul li:nth-child(even){
+        background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 59%,#7cbc0a 100%);
+    } /*홀수짝수 다르게 표시*/
+   
+
+    img{
+        width: 100px;
+        margin: 25px;오전 11:23 2018-10-02
+        border-radius: 50px; /*모서리 둥글게*/
+    }
+
+</style>
+
+======================================================== <flexLayout.html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color:white;
+    }
+
+    .wrapper{
+        width: 80%;
+        min-width: 600px;
+        background-color: #7db9e8;
+        height: 100vh;
+    }
+    .wrapper div{
+        /*border: 1px solid white;*/
+        box-sizing: border-box;
+    }
+
+    .header{
+        height: 10vh;
+    }
+
+    .pagecenter{
+        height: 80vh;
+        display: flex;
+    }
+    .menu{
+        width: 25%;
+    }
+    .main{
+        width:75%;
+    }
+
+    .footer{
+        height: 10vh;
+    }
+</style>
+
+
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="pagecenter">
+            <div class="menu">
+                MENU
+            </div>
+            <div class="main">
+                MAIN
+            </div>
+        </div>
+        <div class="footer">
+            FOOTER
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+============================================================<grid1.html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        width:80%;
+        height: 100vh;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3c5bd;
+    }
+    .wrapper {
+        display: grid;
+        width:100%;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 20vh 60vh 20vh;
+    }
+
+    .facet{
+        box-sizing: border-box;
+        border:1px solid green;
+   } /* 각각의 div*/
+    .header{
+        background-color: #a1d54f;
+        grid-column: 1/4; /*줄이 1부터 4까지*/
+    }
+
+    .main{
+        background-color: #45eabd;
+        grid-column: 2/4;
+    }
+
+
+
+
+
+    </style>
+
+<div class="container">
+
+    <div class="wrapper">
+
+        <div class="facet header"><h1>Area 1</h1></div>
+        <div class="facet"><h1>Area 2</h1></div>
+        <div class="facet main"><h1>Area 3</h1></div>
+        <div class="facet"><h1>Area 4</h1></div>
+        <div class="facet"><h1>Area 5</h1></div>
+        <div class="facet"><h1>Area 6</h1></div>
+        <div class="facet"><h1>Area 7</h1></div>
+        <div class="facet"><h1>Area 8</h1></div>
+        <div class="facet"><h1>Area 9</h1></div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+================================================grid2
+그리드 쉽게 배열
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .wrapper{
+        color: white;
+        background-color: #7cbc0a;
+        width:100%;
+        display: grid;
+        grid-template:
+                'header header'
+                'menu sub'
+                'main main'
+                'footer footer';
+    }
+
+    .f1{
+        grid-area: header;
+        
+    }
+
+    .f2{
+        grid-area: menu;
+    }
+
+    .f3{
+        grid-area: main;
+    }
+    .f4{
+        grid-area: footer;
+    }
+    .f5{
+        grid-area: sub;
+    }
+
+</style>
+
+
+
+<div class="container">
+
+    <div class="wrapper">
+
+        <div class="facet f1"><h1>Area 1</h1></div>
+        <div class="facet f2"><h1>Area 2</h1></div>
+        <div class="facet f3"><h1>Area 3</h1></div>
+        <div class="facet f4"><h1>Area 4</h1></div>
+        <div class="facet f5"><h1>Area 5</h1></div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+----------------------------------------반응형
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .wrapper{
+        color: white;
+        background-color: #7cbc0a;
+        width:100%;
+        display: grid;
+        grid-template:
+                'header header'
+                'menu sub'
+                'main main'
+                'footer footer';
+    }
+
+    .f1{
+        grid-area: header;
+        height: 10vh;
+
+    }
+
+    .f2{
+        /*height: 300px;*/
+        grid-area: menu;
+        /*height: 50px;*/
+        height: 10vh;
+    }
+
+    .f3{
+        grid-area: main;
+        height: 50vh;
+    }
+    .f4{
+        grid-area: footer;
+    }
+    .f5{
+        grid-area: sub;
+        height: 10vh;
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        .wrapper{
+            display: grid;
+            grid-template:
+                    'header'
+                    'menu'
+                    'sub'
+                    'main'
+                    'footer';
+        }
+        .facet{
+            background-color: #ff6600;
+        }
+    } /*반응형 웹페이지 크기에 따라 색깔 달라짐*/
+
+
+</style>
+
+
+
+<div class="container">
+
+    <div class="wrapper">
+
+        <div class="facet f1"><h1>Area 1</h1></div>
+        <div class="facet f2"><h1>Area 2</h1></div>
+        <div class="facet f3"><h1>Area 3</h1></div>
+        <div class="facet f4"><h1>Area 4</h1></div>
+        <div class="facet f5"><h1>Area 5</h1></div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+===========================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{
+
+        margin:0px;
+        padding:0px;
+    }
+    .container{
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator{
+        min-width: 200px;
+        min-height: 300px;
+        background: aquamarine;
+        box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+        /*그림자효과*/
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="calculator">
+        
+    </div>
+
+</div>
+
+</body>
+</html>
+---------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{
+
+        margin:0px;
+        padding:0px;
+    }
+    .container{
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator{
+        min-width: 200px;
+        min-height: 300px;
+        background: aquamarine;
+        box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+        /*그림자효과*/
+    }
+    .displayPart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .displayPart input{
+        margin:10px;
+        border: 1px dotted #777 ;
+        box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+        font-size:2em;
+        width: 70%;
+        border-radius: 20px;
+    }
+    .buttonPart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .row{
+        margin:auto;
+        display: flex;
+        color: white;
+    }
+
+    .row div{
+        display: flex;
+        width : 50px;
+        height:50px;
+        background: #e86c57;
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius:25px;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="calculator">
+        <div class="displayPart">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="buttonPart">
+            <div class="row">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>+</div>
+            </div>
+            <div class="row">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>-</div>
+            </div>
+            <div class="row">
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>*</div>
+            </div>
+            <div class="row">
+                <div>=</div>
+                <div>0</div>
+                <div>c</div>
+                <div>/</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
